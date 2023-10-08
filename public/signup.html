@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form - MongoDB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styleshp.css">
+
+ 
+    <style> body {
+        background-color: #F1B4BB;
+    } 
+    .check {
+        display: inline;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <p class="mail">squad123@gmail.com</p>
+        <p class="mail">+91 1234567890/+91 987654321</p>
+    
+      </div>
+      <br>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">OrganD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./signup.html">Register as a Donor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Learn More</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Share Your Story</a>
+              </li>
+            </ul>
+    
+    
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 main">
+                <form action="/sign_up" method="POST">
+                    <h2>SignUp Form</h2>
+                    <input type="text" class="box" id="name" name="name" placeholder="Name" required />
+                    <br>
+                    <input type="text" class="box" id="email" name="email" placeholder="Email" required />
+                    <br>
+                    <input type="text" class="box" id="phno" name="phno" placeholder="Mobile" required />
+                    <br>
+                    <input type="password" class="box" id="password" name="password" placeholder="Password" required />
+                    <br>
+                    <input type="number" class="box" id="phno" name="aadharno" placeholder="Aadhaar number" required />
+<br>
+                    <label for="Gender"><b>Gender</b></label>
+  <input type="Gender" placeholder="Enter Gender" name="Gender" required maxlength="10">
+
+  <label for="Blood Group"><b>Blood Group</b></label> 
+
+  <select name="BloodGroup" id="Blood Group">
+    <option value="A+ve">A+ve</option>
+    <option value="A-ve">A-ve</option>
+    <option value="B+ve">B+ve</option>
+    <option value="B-ve">B-ve</option>
+    <option value="O+ve">O+ve</option>
+    <option value="O-ve">O-ve</option>
+    <option value="AB+ve">AB+ve</option>
+    <option value="AB-ve">AB-ve</option>
+  </select></br>
+
+  <label for="Address"><b>Address</b>
+  <input type="Address" placeholder="Enter Address" name="Address" required maxlength="80"> </label></br>
+
+  <label for="Organs"><b>Organs</b></label></br>
+  <label for="Blood">Blood </label><br>
+  <input type="checkbox" class="inline" id="Blood" name="Blood" value="Blood" >
+
+  <label for="Kidney"> Kidney</label><br>
+  
+  <input type="checkbox" class="inline" id="Kidney" name="Kidney" value="Kidney">
+
+  
+  <label for="Liver"> Liver<br></label>
+  <input type="checkbox" class="inline" id="Liver" name="Liver" value="Liver">
+
+  <label for="Heart">Heart </label><br>
+  <input type="checkbox" class="inline" id="Heart" name="Heart" value="Heart">
+
+ 
+  <label for="Pancreas">Pancreas </label><br>
+  <input type="checkbox" class="inline" id="Pancreas" name="Pancreas" value="Pancreas">
+
+ 
+  <label for="Lung">Lung </label><br>
+  <input type="checkbox" class="inline" id="Lung" name="Lung" value="Lung">
+
+
+  <label for="Bone">BoneMarrow</label><br>
+  <input type="checkbox" class="inline" id="Bone" name="Bone" value="Bone">
+
+  <label for="Cornea">Cornea </label><br>
+  <input type="checkbox" class="inline" id="Cornea" name="Cornea" value="Cornea">
+
+  <label for="Eye">Eye </label><br>
+  <input type="checkbox" class="inline" id="Eye" name="Eye" value="Eye">
+  <label for="Uterus">Uterus </label><br>
+  <input type="checkbox" class="inline" id="Uterus" name="Uterus" value="Uterus">
+  <div style="display: flex;">
+  <label>By signing in, I agree to all <a href="./tnc.html">terms and conditions</a><input class="inline" type="checkbox" required></label></div>
+                    <input  type="submit" value="Submit" id="submit" />
+                    
+  
+                </form>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+
+    
+
+</body>
+
+</html>
